@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5vh !important;
+    gap: 30px;
+    height: 80vh;
+    >span{
+        visibility: hidden;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        animation: entrance-span 1s ease 5s 1 normal forwards;
+        display: grid;
+        cursor: pointer;
+
+        >*{
+            width: 22px;
+            height: 22px;
+            place-self: center;
+            color: #7678ed;
+        }
+    }
+    >span:hover{
+        >*{
+            animation: hover 1s ease 0s 1 normal forwards;
+        }
+    }
+}
+
+
+@keyframes entrance-span {
+	0% {
+        background: #ffffff;
+		box-shadow:  5px 5px 12px #fcfcfc,
+             -5px -5px 12px #ffffff;
+	}
+
+	100% {
+        background: #7678ed25;
+		box-shadow:  5px 5px 10px #d9d9d93f,-5px -5px 10px #ffffff;
+        visibility: visible;
+	}
+}
+
+@keyframes hover {
+	0% {
+		transform: scale(1);
+
+	}
+    100% {
+		transform: scale(0.7);
+	}
+}
