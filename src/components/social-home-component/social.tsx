@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import './social.scss';
 
