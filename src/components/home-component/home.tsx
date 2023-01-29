@@ -6,7 +6,7 @@ import Social from '../social-home-component/social';
 import About from '../about-home-component/about';
 import Introduction from '../introduction/introduction';
 import Skills from '../skills-component/skills';
-
+import Projets from '../projects-component/projets';
 
 const Home: FunctionComponent = () => {
     const [isDarkMode, setDarkMode] = useState<boolean>(false);
@@ -57,8 +57,10 @@ const Home: FunctionComponent = () => {
                         <div>
                             <Skills/>
                         </div>
+                    </div>
+                    <div className="projets">
                         <div>
-                            
+                            <Projets/>
                         </div>
                     </div>
                 </div>

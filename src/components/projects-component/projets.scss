@@ -1,0 +1,191 @@
+.contains-projets{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 5vh !important;
+    margin-left: 10vw !important;
+    margin-right: 10vw !important;
+    >div:first-child{
+        font-weight: bold;
+        font-size: x-large;
+        justify-self: center;
+    }
+    >div:nth-child(2){
+        color: #70798ca9;
+        justify-self: center;
+    }
+    >div:nth-child(3){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 5vh !important;
+        justify-self: center;
+        gap: 50px;
+        >*{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 80% 20%;
+            height: 40vh;
+            width: 40vh;
+        }
+        >section{
+            background-color: #7878fa08;
+            border-radius: 15px 15px 0px 0px;
+            cursor: pointer;
+            >div:first-child{
+                padding: 10px;
+               background-color: #7678ed94;
+               border-radius: 15px 15px 0px 0px;
+            }
+            >div:first-child:hover{
+                animation: images 2s linear 0s 1 normal forwards;
+            }
+            >div:nth-child(2){
+                text-align: center;
+                align-self: center;
+                vertical-align: text-top;
+                font-weight: 400;
+            }
+        }
+        >section:first-child{
+            >div:first-child{
+                background-image: url(../../assets/sellmate.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        >section:nth-child(2){
+            >div:first-child{
+                background-image: url(../../assets/portfolio.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        >section:nth-child(3){
+            >div:first-child{
+                background-image: url(../../assets/Powerpoint.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .list-utils{
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        top: 30vh;
+        left: 2vw;
+        align-self: center;
+        >div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;                       
+        }
+    }
+}
+
+.sellMate-div-1{
+    opacity: 0;
+    background: #7678ed25;
+    background-image: url(../../assets/vscode.png);
+    background-position: center;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+}
+
+.sellMate-div-2{
+    opacity: 0;
+    background: #7678ed25;
+    background-image: url(../../assets/angular.png);
+    background-position: center;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    animation: technologies-entrance 0.5s ease 0.5s 1 normal forwards;
+}
+
+.sellMate-div-3{
+    opacity: 0;
+    background: #7678ed25;
+    background-image: url(../../assets/github.png);
+    background-position: center;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    animation: technologies-entrance 0.5s ease 1s 1 normal forwards;
+}
+
+.portfolio-div-1{
+    opacity: 0;
+    background: #7678ed25;
+    background-image: url(../../assets/vscode.png);
+    background-position: center;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+}
+
+.portfolio-div-2{
+    opacity: 0;
+    background: #7678ed25;
+    background-image: url(../../assets/react.png);
+    background-position: center;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    animation: technologies-entrance 0.5s ease 0.5s 1 normal forwards;
+}
+
+.portfolio-div-3{
+    opacity: 0;
+    background: #7678ed25;
+    background-image: url(../../assets/github.png);
+    background-position: center;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    animation: technologies-entrance 0.5s ease 1s 1 normal forwards;
+}
+.pwp-div-1{
+    opacity: 0;
+    background: #7678ed25;
+    background-image: url(../../assets/pwp.png);
+    background-position: center;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+}
+
+.visibility{
+    visibility: hidden;
+}
+
+@keyframes images {
+	0% {
+		background-position: center;
+		background-size: 100%;
+	}
+
+	100% {
+		background-position: center;
+		background-size: 110%;
+	}
+}
+
+@keyframes technologies-entrance {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

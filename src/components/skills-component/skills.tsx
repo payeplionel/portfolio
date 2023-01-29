@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import './skills.scss';
-import { BiBriefcaseAlt2, BiBookBookmark } from "react-icons/bi";
+import { BiBriefcaseAlt2, BiBookBookmark} from "react-icons/bi";
+import { BsCalendar2Range } from "react-icons/bs";
 
 const Skills: FunctionComponent = () => {
 
@@ -25,14 +26,14 @@ const Skills: FunctionComponent = () => {
                             <div>
                                 <p>Computer Engineer</p>
                                 <p>Institut Saint Jean</p>
-                                <p>date</p>
+                                <p><BsCalendar2Range/> date</p>
                             </div>
                         </div>
                         <div className={`${isEducation ? "work-hide" : "work-show-1"}`}>
                             <div>
                                 <p>Computer Engineer</p>
                                 <p>Institut Saint Jean</p>
-                                <p>date</p>
+                                <p><BsCalendar2Range/> date</p>
                             </div>
                         </div>
                         <div></div>
@@ -40,7 +41,7 @@ const Skills: FunctionComponent = () => {
                             <div className={`${isEducation ? "work-hide" : "work-show-3"}`}>
                                 <p>Computer Engineer</p>
                                 <p>Institut Saint Jean</p>
-                                <p>date</p>
+                                <p><BsCalendar2Range/> date</p>
                             </div>
                         </div>
                         <div></div>
@@ -69,12 +70,12 @@ const Skills: FunctionComponent = () => {
                             <div className={`${isEducation ? "education-show-2" : "education-hide"}`}>
                                 <p>Computer Engineer</p>
                                 <p>Institut Saint Jean</p>
-                                <p>date</p>
+                                <p><BsCalendar2Range/> date</p>
                             </div>
                             <div className={`${isEducation ? "work-hide" : "work-show-2"}`}>
                                 <p>Computer Engineer</p>
                                 <p>Institut Saint Jean</p>
-                                <p>date</p>
+                                <p><BsCalendar2Range/> date</p>
                             </div>
                         </div>
                         <div></div>
@@ -82,7 +83,7 @@ const Skills: FunctionComponent = () => {
                             <div className={`${isEducation ? "work-hide" : "work-show-4"}`}>
                                 <p>Computer Engineer</p>
                                 <p>Institut Saint Jean</p>
-                                <p>date</p>
+                                <p><BsCalendar2Range/> date</p>
                             </div>
                         </div>
                     </div>

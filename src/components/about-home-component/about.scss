@@ -37,10 +37,9 @@
         }
     }
     >div:nth-child(3){
-        position: absolute;
+        position:static;
         bottom:  10vh;
         display: flex;
-        justify-content: center;
         align-items: center;
         gap: 10px;
         cursor: pointer;
