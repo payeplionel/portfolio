@@ -1,7 +1,8 @@
+@import '../../assets/styles/global.scss';
 .contain-skills{
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 5vh !important;
+    padding-top: 1vh !important;
     margin-left: 10vw !important;
     margin-right: 10vw !important;
 
@@ -11,11 +12,11 @@
         justify-self: center;
     }
     >div:nth-child(2){
-        color: #70798ca9;
+        color: $sub-text;
         justify-self: center;
     }
     >div:nth-child(3){
-        margin-top: 10vh !important;
+        margin-top: 5vh !important;
         >section:first-child{
             display: flex;
             gap: 50px;
@@ -23,7 +24,7 @@
             align-items: center;
             font-size: larger;
             font-weight: bold;
-            color: #70798ca9;
+            color: $sub-text;
             cursor: pointer;
         }
         >section:nth-child(2){
@@ -42,15 +43,15 @@
                     >span{
                         height: 15px;
                         width: 15px;
-                        border: 3px solid  #7678ed;
+                        border: 3px solid  $primary-color;
                         border-radius: 100%;
                     }
                     >hr{
                         height: 10vh;
                         width:2px;
                         border-width:0;
-                        color: #7678ed;
-                        background-color:#7678ed;
+                        color: $primary-color;
+                        background-color:$primary-color;
                         border-radius: 2px;
                     }
                 }    
@@ -63,7 +64,7 @@
                             font-weight: bold;
                         }
                         >p:nth-child(2),>p:nth-child(3){
-                            color: #70798ca9;
+                            color: $sub-text;
                             font-size: smaller;
                         }
                     }

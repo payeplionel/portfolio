@@ -1,3 +1,4 @@
+@import '../../assets/styles/global.scss';
 .container{
     display: flex;
     flex-direction: column;
@@ -18,7 +19,7 @@
             width: 22px;
             height: 22px;
             place-self: center;
-            color: #7678ed;
+            color: $primary-color;
         }
     }
     >span:hover{
@@ -37,8 +38,8 @@
 	}
 
 	100% {
-        background: #7678ed25;
-		box-shadow:  5px 5px 10px #d9d9d93f,-5px -5px 10px #ffffff;
+        background:  #74baff43;
+		box-shadow:  5px 5px 10px #74baff43,-5px -5px 10px #ffffff;
         visibility: visible;
 	}
 }

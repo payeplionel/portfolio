@@ -1,0 +1,133 @@
+@import '../../assets/styles/global.scss';
+.contain-contact-me{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 10vh !important;
+    margin-left: 10vw !important;
+    margin-right: 10vw !important;
+    margin-bottom: 2vw !important;
+    >div:first-child{
+        font-weight: bold;
+        font-size: x-large;
+        justify-self: center;
+    }
+    >div:nth-child(2){
+        color: $sub-text;
+        justify-self: center;
+    }
+    >div:nth-child(3){
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 100px;
+        margin-top: 5vh!important;
+        >div:nth-child(1){
+            justify-self: end;
+            .contact-items{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                gap: 5px;
+                >div:first-child>span{
+                    place-self: center;
+                    color: $primary-color;
+                }
+                >div:nth-child(2){
+                    >div:nth-child(1){
+                        font-size: large;
+                    }
+                    >div:nth-child(2){
+                        font-size: small;
+                        color: $sub-text;
+                    }
+                }
+            }
+            .contact-items:not(.contact-items:first-child){
+                margin-top: 5vh !important;
+            }
+            .contact-items:not(.contact-items:last-child){
+                cursor: pointer;
+            }
+        }
+        >div:nth-child(2){
+            max-width: 100%;
+            >div:first-child{
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2vw;
+                justify-content: center;
+                *{
+                    place-self: center stretch;
+                }
+                input, textarea{
+                    font-size:larger;
+                    width: 90%;
+                    color: $sub-text;
+                    background-color: $background-color-project;
+                    height: 10vh;
+                    border: none;
+                    border-radius: 5px;
+                    padding-left: 10px !important;
+                    justify-self: center;
+                }
+                textarea{
+                    padding-top: 5px !important;
+                    height: 30vh;
+                    justify-self: center;
+                }
+                input:focus, textarea:focus{
+                    outline: none;
+                }
+                >div:first-child{
+                    display: grid;
+                    grid-template-columns:  1fr 1fr;
+                    input{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copied{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    background-color: $scroll-back-color;
+    position: absolute;
+    //top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: $scroll-back-color 0px 2px 8px 0px;
+    animation: copied 2s ease 0s 1 normal forwards;
+}
+
+@keyframes copied {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	75% {
+		transform: translateX(0);
+	}
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1230px){
+    .contain-contact-me{
+        >div:nth-child(3){
+            grid-template-columns: 1fr;
+            >div:nth-child(1){
+                justify-self: stretch;
+                .contact-items{
+                    display: grid;
+                    flex-direction: 1fr 1fr;
+                }
+            }
+        }
+    }
+}

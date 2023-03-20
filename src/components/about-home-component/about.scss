@@ -1,6 +1,7 @@
+@import '../../assets/styles/global.scss';
 .contain-about{
-    width: 80%;
-    height: 80vh;
+    width: 95%;
+    height: 100vh;
     margin: auto !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,7 +20,7 @@
             font-size: x-large;
         }  
         >p:nth-child(2), >p:nth-child(3){
-            color: #70798ca9;
+            color: $sub-text;
         } 
     }
     >div:nth-child(2){
@@ -31,7 +32,7 @@
         >div:first-child{
             width: 30vw;
             height: 30vw;
-            background-color: #7678ed;
+            background-color: $scroll-back-color;
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             animation: picture-background-move 20s ease 0s infinite normal forwards;
         }
@@ -44,7 +45,7 @@
         gap: 10px;
         cursor: pointer;
         >*{
-            color: #7678ed;
+            color: $primary-color;
         }
         >div:first-child{
             border: 2px solid;
@@ -57,8 +58,8 @@
                 height:10px;
                 width:2px;
                 border-width:0;
-                color: #7678ed;
-                background-color:#7678ed;
+                color:  $primary-color;
+                background-color:$primary-color;
                 border-radius: 2px;
                 animation: mouse-move 5s ease 0s infinite normal forwards;
             }
@@ -78,10 +79,10 @@ button {
     margin-top: 3vh !important;
     display: flex;
     height: 6vh;
-    width: 10vw;
+    width: 150px;
     justify-content: center;
     align-items: center;
-    background-color: #7678ed;
+    background-color: $primary-color;
     gap: 10px;
     color: white;
     transition: all 0.2s ease-in;
@@ -91,9 +92,9 @@ button {
 }
 button:hover {
     box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-    border: 1px solid #7678ed;
+    border: 1px solid $primary-color;
     background-color: white;
-    color: #7678ed; 
+    color: $primary-color; 
     cursor: pointer;      
 }
 
@@ -142,5 +143,78 @@ button:hover {
 	100% {
 		transform: translateY(0px);
 	}
+}
+
+@media(max-width: 1100px){
+    .contain-about>div:nth-child(2){
+        >div:first-child{
+            width: 325px;
+            height: 325px;
+        }
+    }
+}
+@media (max-width: 975px) {
+    .contain-about>div:nth-child(2){
+        justify-self: end;
+        margin-right: 5vw !important;
+       
+    }
+}
+@media (max-width: 800px) {
+    .contain-about{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 5vh;
+        >*{
+            align-self: center;
+        }
+        >div:nth-child(3){
+            display: none;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .contain-about>div:nth-child(2){
+        margin: 2vw !important;
+    }
+    .nav-items{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .contain-about{
+        margin-right: 3vw !important;
+        margin-left: 3vw !important;
+        >*{
+            align-self: center;
+        }
+        >div:first-child{
+            text-align: center;
+            >p>button{
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        >div:nth-child(3){
+            display: none;
+        }
+    }
+}
+@media(max-width: 400px){
+    .contain-about>div:nth-child(2){
+        >div:first-child{
+            width: 250px;
+            height: 250px;
+        }
+    }
+}
+@media(max-width: 300px){
+    .contain-about>div:nth-child(2){
+        >div:first-child{
+            width: 200px;
+            height: 200px;
+        }
+    }
 }
 
