@@ -29,7 +29,12 @@ const Projets: FunctionComponent = () => {
                 </section>
                 <section className="portfolio-projet" onMouseEnter={() =>HoverPortfolio(true)} 
                 onMouseLeave={() =>HoverPortfolio(false)}>
-                    <div></div>
+                    <div>
+                        <video controls>
+                            <source src="/videos/portfolio.mp4" type="video/mp4"/>
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
                     <div><span>Portfolio</span><button>Visit</button></div>
                 </section>
                 <section onMouseEnter={() =>HoverPowerpoint(true)} 

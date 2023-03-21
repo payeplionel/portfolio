@@ -1,7 +1,7 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import './home.scss';
-import moon from '../../assets/moon.gif';
-import sun from '../../assets/sun.gif';
+import moon from '../../assets/images/moon.gif';
+import sun from '../../assets/images/sun.gif';
 import Social from '../social-home-component/social';
 import About from '../about-home-component/about';
 import Introduction from '../introduction/introduction';
@@ -14,7 +14,6 @@ import { CiMail } from 'react-icons/ci';
 import { GoMailRead } from 'react-icons/go';
 
 const Homepage: FunctionComponent = () => {
-    const [isScrolling, setIsScrolling] = useState(false);
     const [isdarkmode, setdarkmode] = useState<boolean>(false);
     const [section, setSection] = useState<number>(1);
 
@@ -25,19 +24,6 @@ const Homepage: FunctionComponent = () => {
     const onEnterSection = (section: number) => {
         setSection(section);
     }
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
-    const handleScroll = () => {
-        if (window.pageYOffset > 0) {
-          setIsScrolling(true);
-        } else {
-          setIsScrolling(false);
-        }
-      };
 
     return (
         <div className="container">
