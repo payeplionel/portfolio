@@ -6,6 +6,7 @@
     margin-left: 10vw !important;
     margin-right: 10vw !important;
     margin-bottom: 2vw !important;
+    
     >div:first-child{
         font-weight: bold;
         font-size: x-large;
@@ -119,6 +120,7 @@
 
 @media (max-width: 1230px){
     .contain-contact-me{
+        margin-bottom: 10vw !important;
         >div:nth-child(3){
             grid-template-columns: 1fr;
             >div:nth-child(1){

@@ -25,24 +25,37 @@ const Projets: FunctionComponent = () => {
                 onMouseEnter={() =>HoverSellmate(true)} 
                 onMouseLeave={() =>HoverSellmate(false)} >
                     <div></div>
-                    <div>SellMate</div>
+                    <div><span>SellMate</span><button>Visit</button></div>
                 </section>
                 <section className="portfolio-projet" onMouseEnter={() =>HoverPortfolio(true)} 
                 onMouseLeave={() =>HoverPortfolio(false)}>
                     <div></div>
-                    <div>Portfolio</div>
+                    <div><span>Portfolio</span><button>Visit</button></div>
                 </section>
                 <section onMouseEnter={() =>HoverPowerpoint(true)} 
                 onMouseLeave={() =>HoverPowerpoint(false)}>
                     <div className="powerpoint-projet"></div>
-                    <div>PowerPoints</div>
+                    <div><span>PowerPoint</span><button>Visit</button></div>
                 </section>
             </div>
             {(isHoverSellmate || isHoverPortfolio || isHoverPowerpoint) &&
                 <section className="list-utils">
-                    <div className={`${isHoverSellmate && "sellMate-div-1"} ${isHoverPortfolio && "portfolio-div-1"} ${isHoverPowerpoint && "pwp-div-1"}`}></div>
-                    <div className={`${isHoverSellmate && "sellMate-div-2"} ${isHoverPortfolio && "portfolio-div-2"}`}></div>
-                    <div className={`${isHoverSellmate && "sellMate-div-3"} ${isHoverPortfolio && "portfolio-div-3"}`}></div>
+                    <div className={`${isHoverSellmate && "sellMate-div-1"} ${isHoverPortfolio && "portfolio-div-1"} ${isHoverPowerpoint && "pwp-div-1"}`}>
+                        <div></div>
+                        {isHoverSellmate && <div>Angular</div>}
+                        {isHoverPortfolio && <div>React</div>}
+                        {isHoverPowerpoint && <div>Powerpoint</div>}
+                    </div>
+                    <div className={`${isHoverSellmate && "sellMate-div-2"} ${isHoverPortfolio && "portfolio-div-2"}`}>
+                        <div></div>
+                        {isHoverSellmate && <div>TypeScript</div>}
+                        {isHoverPortfolio && <div>TypeScript</div>}
+                    </div>
+                    <div className={`${isHoverSellmate && "sellMate-div-3"} ${isHoverPortfolio && "portfolio-div-3"}`}>
+                        <div></div>
+                        {isHoverSellmate && <div>SCSS</div>}
+                        {isHoverPortfolio && <div>SCSS</div>}
+                    </div>
                     <div></div>
                 </section>
             }

@@ -14,7 +14,7 @@
         visibility: hidden;
         justify-content: center;
         gap: 10px;
-        animation: entrance 1s ease 5.5s 1 normal forwards;
+        animation: entrance 1s ease 1.5s 1 normal forwards;
         >p:first-child{
             font-weight: bold;
             font-size: x-large;
@@ -28,7 +28,7 @@
         flex-direction: column;
         justify-content: center;
         visibility: hidden;
-        animation: entrance 1s ease 5.5s 1 normal forwards;
+        animation: entrance 1s ease 1.5s 1 normal forwards;
         >div:first-child{
             width: 30vw;
             height: 30vw;

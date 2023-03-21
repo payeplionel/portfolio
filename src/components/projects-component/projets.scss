@@ -52,6 +52,22 @@
                 background-position: center;
                 background-repeat: no-repeat;
             }
+            >div:nth-child(2){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                >*{
+                    justify-self: center;
+                    align-self: center;
+                }
+                >button{
+                    width: 50px;
+                    margin-top: 0vh !important;
+                    margin-right: 0.5vw !important;
+                    justify-self: end;
+                    box-shadow: none;
+                    height: 4vh;
+                }
+            }
         }
         >section:nth-child(2){
             >div:first-child{
@@ -59,6 +75,22 @@
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+            }
+            >div:nth-child(2){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                >*{
+                    justify-self: center;
+                    align-self: center;
+                }
+                >button{
+                    width: 50px;
+                    margin-top: 0vh !important;
+                    margin-right: 0.5vw !important;
+                    justify-self: end;
+                    box-shadow: none;
+                    height: 4vh;
+                }
             }
         }
         >section:nth-child(3){
@@ -68,6 +100,22 @@
                 background-position: center;
                 background-repeat: no-repeat;
             }
+            >div:nth-child(2){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                >*{
+                    justify-self: center;
+                    align-self: center;
+                }
+                >button{
+                    width: 50px;
+                    margin-top: 0vh !important;
+                    margin-right: 0.5vw !important;
+                    justify-self: end;
+                    box-shadow: none;
+                    height: 4vh;
+                }
+            }
         }
     }
     .list-utils{
@@ -75,10 +123,8 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px;
-        top: 30vh;
-        left: 2vw;
         align-self: center;
-        >div{
+        >div>div:nth-child(1){
             width: 50px;
             height: 50px;
             border-radius: 50px;                       
@@ -88,78 +134,142 @@
 
 .sellMate-div-1{
     opacity: 0;
-    background: $background-color-item;
-    background-image: url(../../assets/vscode.png);
-    background-position: center;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+    >div:nth-child(1){
+        background: #74baff51;
+        background-image: url(../../assets/angular.png);
+        background-position: center;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+    >div:nth-child(2){
+        text-align: center;
+        font-size: xx-small;
+    }  
 }
 
 .sellMate-div-2{
     opacity: 0;
-    background: $background-color-item;
-    background-image: url(../../assets/angular.png);
-    background-position: center;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat; 
-    animation: technologies-entrance 0.5s ease 0.5s 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+    >div:nth-child(1){
+        background: #74baff51;
+        background-image: url(../../assets/typescript.png);
+        background-position: center;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }  
+    >div:nth-child(2){
+        text-align: center;
+        font-size: xx-small;
+    }    
 }
 
 .sellMate-div-3{
     opacity: 0;
-    background: $background-color-item;
-    background-image: url(../../assets/github.png);
-    background-position: center;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat; 
-    animation: technologies-entrance 0.5s ease 1s 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+    >div:nth-child(1){
+        background: #74baff51;
+        background-image: url(../../assets/scss.png);
+        background-position: center;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+    >div:nth-child(2){
+        text-align: center;
+        font-size: xx-small;
+    }  
 }
 
 .portfolio-div-1{
     opacity: 0;
-    background: $background-color-item;
-    background-image: url(../../assets/vscode.png);
-    background-position: center;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+    >div:nth-child(1){
+        background: #74baff51;
+        background-image: url(../../assets/react.png);
+        background-position: center;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }    
+    >div:nth-child(2){
+        text-align: center;
+        font-size: xx-small;
+    }  
 }
 
 .portfolio-div-2{
     opacity: 0;
-    background: $background-color-item;
-    background-image: url(../../assets/react.png);
-    background-position: center;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat; 
-    animation: technologies-entrance 0.5s ease 0.5s 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+    >div:nth-child(1){
+        background: #74baff51;
+        background-image: url(../../assets/typescript.png);
+        background-position: center;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    } 
+    >div:nth-child(2){
+        text-align: center;
+        font-size: xx-small;
+    }    
 }
 
 .portfolio-div-3{
     opacity: 0;
-    background: $background-color-item;
-    background-image: url(../../assets/github.png);
-    background-position: center;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat; 
-    animation: technologies-entrance 0.5s ease 1s 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+    >div:nth-child(1){
+        background: #74baff51;
+        background-image: url(../../assets/scss.png);
+        background-position: center;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    } 
+    >div:nth-child(2){
+        text-align: center;
+        font-size: xx-small;
+    }  
 }
 .pwp-div-1{
     opacity: 0;
-    background: $background-color-item;
-    background-image: url(../../assets/pwp.png);
-    background-position: center;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
+    >div:nth-child(1){
+        background: #74baff51;
+        background-image: url(../../assets/pwp.png);
+        background-position: center;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    } 
+    >div:nth-child(2){
+        text-align: center;
+        font-size: xx-small;
+    }  
 }
 
 .visibility{
@@ -168,13 +278,13 @@
 
 @keyframes images {
 	0% {
-		background-position: center;
+		background-position: center top;
 		background-size: 100%;
 	}
 
 	100% {
-		background-position: center;
-		background-size: 110%;
+		background-position: center top;
+		background-size: 150%;
 	}
 }
 
