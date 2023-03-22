@@ -5,7 +5,7 @@ import './social.scss';
 
 const Social: FunctionComponent = () => {
     return(
-        <div className="container">
+        <div className="container-social" id='personnal'>
             <span><FaLinkedinIn/></span>
             <span><FaGithub/></span>
             <span><HiMail/></span>

@@ -31,7 +31,7 @@ const Contactme: FunctionComponent = () => {
       }
 
     return(
-        <div className="contain-contact-me">
+        <div className="contain-contact-me" id="conctactme">
             <div>Contact Me</div>
             <div>Get in touch</div>
             <div>

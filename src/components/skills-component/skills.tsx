@@ -12,7 +12,7 @@ const Skills: FunctionComponent = () => {
     }
 
     return (
-        <div className="contain-skills">
+        <div className="contain-skills" id="skills">
             <div>Qualification</div>
             <div>My personnal journey</div>
             <div>

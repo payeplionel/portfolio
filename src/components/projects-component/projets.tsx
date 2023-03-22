@@ -17,7 +17,7 @@ const Projets: FunctionComponent = () => {
     }
 
     return(
-        <div className="contains-projets">
+        <div className="contains-projets" id="project">
             <div>Projets</div>
             <div>List of my projects</div>
             <div>

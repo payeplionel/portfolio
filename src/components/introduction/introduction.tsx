@@ -4,7 +4,7 @@ import { BsCloudDownload } from "react-icons/bs";
 
 const Introduction: FunctionComponent = () => {
     return(
-        <div className="contain-introduction">
+        <div className="contain-introduction" id="introduction">
             <div>About Me</div>
             <div>My introduction</div>
             <div>

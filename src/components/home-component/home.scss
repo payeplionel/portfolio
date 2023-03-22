@@ -33,58 +33,6 @@
 //     animation: jump 0.5s linear 0s 2 normal forwards, after-loading 0.5s ease 1s 1 normal forwards;
 // }  
 
-nav:first-child{
-    display: grid;
-    grid-template-columns: 30% 70%;
-    font-weight: 400;
-    color: $nav-color;
-    backdrop-filter: blur(5px);
-    background-color: rgba(212, 124, 124, 0);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    padding-top: 1.1vh !important;
-    >div:first-child{
-        animation: entrance 1s ease 2s 1 normal forwards;
-        margin-top: 1.1vh !important;
-        margin-left: 10vw !important;
-    }
-    >div:nth-child(2)>ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        grid-template-columns: 1fr;
-        gap: 30px;
-        >*{
-            visibility: hidden; 
-        }
-        >li>a{
-            all: unset;
-            cursor: pointer;
-            visibility: hidden;
-            padding: 5px !important;
-            border-radius: 2px;
-            background-color: rgba(255, 255, 255, 0.581);
-        }
-        >li>a{
-            margin-top: 1.1vh !important;
-        }
-        >li>a:first-child{
-            animation: entrance-item-nav 1s ease 0.5s 1 normal forwards;
-        }
-        >li>a:nth-child(2){animation: entrance-other 0.5s ease 1s 1 normal forwards;}
-        >li>a:nth-child(3){animation: entrance-other 0.5s ease 1s 1 normal forwards;}
-        >li>a:nth-child(4){animation: entrance-other 0.5s ease 1s 1 normal forwards;}
-        >li>a:nth-child(5){animation: entrance-other 0.5s ease 1s 1 normal forwards;}
-        >span:nth-child(6){
-            animation: entrance-other 0.5s ease 1s 1 normal forwards;
-            cursor: pointer;
-        }
-    }
-}
-
 .nav-items-mobile{
     width: 100%;
     position: fixed;
@@ -121,7 +69,6 @@ nav:first-child{
         .personnal{
             display: grid;
             grid-template-columns: 10% 90%;
-            margin-top: 5% !important;
             margin-left: 10vw !important;
             max-height: 100vh;
         }
@@ -187,48 +134,12 @@ nav:first-child{
     }
 }
 
-@keyframes entrance {
-	0% {
-		opacity: 0;
-		transform: translateY(50px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-@keyframes entrance-item-nav {
-	0% {
-		opacity: 0;
-		transform: translateY(50px);
-	}
-
-	100% {
-		opacity: 1;
-        visibility: visible;
-		transform: translateY(0);
-	}
-}
-
 @keyframes after-loading {
     100%{
         background-color: $background-color;
         display: none;
         visibility: hidden;
     }
-}
-
-@keyframes entrance-other {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-        visibility: visible;
-	}
 }
 
 ::-webkit-scrollbar-track
