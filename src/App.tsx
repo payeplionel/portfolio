@@ -57,7 +57,7 @@ const App: FunctionComponent = () => {
               </Link>
             </li>
             <li>
-              <Link activeClass="active" smooth spy to="conctactme">
+              <Link activeClass="active" smooth spy to="contactme">
                 Contactme
               </Link>
             </li>
@@ -127,7 +127,7 @@ const App: FunctionComponent = () => {
             </Link>
           </li>
           <li>
-            <Link activeClass="active-icon" smooth spy to="conctactme" onClick={() => onEnterSection(5)}>
+            <Link activeClass="active-icon" smooth spy to="contactme" onClick={() => onEnterSection(5)}>
               {section === 5 ? <GoMailRead size={30}/> : <CiMail size={30} />}
             </Link>
           </li>

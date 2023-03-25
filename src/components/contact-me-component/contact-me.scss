@@ -2,7 +2,7 @@
 .contain-contact-me{
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 10vh !important;
+    padding-top: 15vh !important;
     margin-left: 10vw !important;
     margin-right: 10vw !important;
     margin-bottom: 2vw !important;
@@ -50,7 +50,7 @@
         }
         >div:nth-child(2){
             max-width: 100%;
-            >div:first-child{
+            >.form-section{
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: 2vw;
@@ -62,7 +62,6 @@
                     font-size:larger;
                     width: 90%;
                     color: $sub-text;
-                    background-color: $background-color-project;
                     height: 10vh;
                     border: none;
                     border-radius: 5px;
@@ -89,6 +88,36 @@
     }
 }
 
+.is-invalid{
+    background-color: rgb(255, 209, 209);
+    animation: attention 2s ease 0s 1 normal forwards;
+}
+
+.valid{
+    background-color: $background-color-project;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    >span{
+        font-size: x-small;
+        color: rgb(252, 180, 180);
+    }
+}
+
+.disabled-button{
+    background-color: #dcdde1;
+    box-shadow: none;
+}
+.disabled-button:hover {
+    box-shadow: none;
+    border: none;
+    background-color: #dcdde1;
+    color: white; 
+    cursor:no-drop;     
+}
+
 .copied{
     text-align: center;
     width: 200px;
@@ -102,6 +131,11 @@
     border-radius: 5px;
     box-shadow: $scroll-back-color 0px 2px 8px 0px;
     animation: copied 2s ease 0s 1 normal forwards;
+}
+
+.sended{
+    position: absolute;
+    bottom: 80px;
 }
 
 @keyframes copied {
@@ -132,4 +166,50 @@
             }
         }
     }
+}
+
+@keyframes attention {
+	0% {
+		transform: translate(0);
+	}
+
+	10% {
+		transform: translate(-2px, -2px);
+	}
+
+	20% {
+		transform: translate(2px, -2px);
+	}
+
+	30% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(2px, 2px);
+	}
+
+	50% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, -2px);
+	}
+
+	70% {
+		transform: translate(-2px, 2px);
+	}
+
+	80% {
+		transform: translate(-2px, -2px);
+	}
+
+	90% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
 }

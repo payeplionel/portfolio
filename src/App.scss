@@ -75,10 +75,9 @@ nav:first-child{
   display: grid;
   grid-template-columns: 10% 90%;
   margin-left: 10vw !important;
-  max-height: 100vh;
 }
 .about-me{
-  height: 100vh;
+  height: 100%;
 }
 .active{
   font-weight: bold;
