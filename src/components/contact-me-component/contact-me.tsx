@@ -77,24 +77,23 @@ const Contactme: FunctionComponent = () => {
                         setTextSend("Send");
                     }, 1500);
                 }, 1500);
+                const requestOptions = {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: "name : " + name + " email : " + email + " project : " + project + " message : " + message
+                };
+                fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204', requestOptions)
+                    .then(response => response.json())
+                    .then(data => {
+                        setAlerText("mail send");
+                        setIsCopied(true);
+                        setTimeout(() => {
+                            setIsCopied(false);
+                        }, 1500);
+                    })
+                    .catch(error => console.log(error));
             }
         }
-
-        // const requestOptions = {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: "name : " + name + " email : " + email + " project : " + project + " message : " + message
-        // };
-        // fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204', requestOptions)
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         setAlerText("mail send");
-        //         setIsCopied(true);
-        //         setTimeout(() => {
-        //             setIsCopied(false);
-        //         }, 1500);
-        //     })
-        //     .catch(error => console.log(error));
     }
 
     return (
