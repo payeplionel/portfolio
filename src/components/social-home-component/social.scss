@@ -6,7 +6,7 @@
     padding-top: 5vh !important;
     gap: 30px;
     height: 80vh;
-    >span{
+    >span>a{
         visibility: hidden;
         width: 40px;
         height: 40px;
@@ -22,7 +22,7 @@
             color: $primary-color;
         }
     }
-    >span:hover{
+    >span:hover>a{
         >*{
             animation: hover 1s ease 0s 1 normal forwards;
         }

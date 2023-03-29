@@ -16,6 +16,17 @@ const Projets: FunctionComponent = () => {
         setHoverPowerpoint(state);
     }
 
+    const visitProject = (site: string) =>{
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: `Quelqu'un a visité ton site ${site} 📲`
+        };
+        fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204visit', requestOptions)
+            .then(response => response.json())
+            .catch(error => console.log(error));
+    }
+
     return(
         <div className="contains-projets" id="project">
             <div>Projets</div>
@@ -25,7 +36,7 @@ const Projets: FunctionComponent = () => {
                 onMouseEnter={() =>HoverSellmate(true)} 
                 onMouseLeave={() =>HoverSellmate(false)} >
                     <div></div>
-                    <div><span>SellMate</span><button>Visit</button></div>
+                    <div><span>SellMate</span><button onClick={()=> visitProject("SellMate")}>Visit</button></div>
                 </section>
                 <section className="portfolio-projet" onMouseEnter={() =>HoverPortfolio(true)} 
                 onMouseLeave={() =>HoverPortfolio(false)}>
@@ -40,7 +51,7 @@ const Projets: FunctionComponent = () => {
                 <section onMouseEnter={() =>HoverPowerpoint(true)} 
                 onMouseLeave={() =>HoverPowerpoint(false)}>
                     <div className="powerpoint-projet"></div>
-                    <div><span>PowerPoint</span><button>Visit</button></div>
+                    <div><span>PowerPoint</span><button onClick={()=> visitProject("PowerPoint")}>Visit</button></div>
                 </section>
             </div>
             {(isHoverSellmate || isHoverPortfolio || isHoverPowerpoint) &&

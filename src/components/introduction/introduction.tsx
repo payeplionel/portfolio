@@ -3,7 +3,18 @@ import './introduction.scss';
 import { BsCloudDownload } from "react-icons/bs";
 
 const Introduction: FunctionComponent = () => {
-    return(
+    const downloadCV = () => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: `Quelqu'un a téléchargé ton cv 📄`
+        };
+        fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204visit', requestOptions)
+            .then(response => response.json())
+            .catch(error => console.log(error));
+    }
+
+    return (
         <div className="contain-introduction" id="introduction">
             <div>About Me</div>
             <div>My introduction</div>
@@ -22,14 +33,16 @@ const Introduction: FunctionComponent = () => {
                             <span>02+</span>
                             <span>Completed projects</span>
                         </p>
-                      
+
                         <p>
                             <span>03+</span>
-                            <span>Companies worked</span>  
-                        </p>  
+                            <span>Companies worked</span>
+                        </p>
                     </section>
                     <section>
-                        <button><b>Download CV  <BsCloudDownload/></b></button>
+                        <a onClick={downloadCV} href="/cv/Lionel_PAYEP_CV.pdf" download="Lionel_PAYEP_CV">
+                            <button><b>Download CV  <BsCloudDownload /></b></button>
+                        </a>
                     </section>
                 </div>
             </div>

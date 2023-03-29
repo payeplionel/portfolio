@@ -57,6 +57,11 @@
                     }
                 }
             }
+            >section:last-child{
+                >a{
+                    all: unset;
+                }
+            }
         }
     }
 }

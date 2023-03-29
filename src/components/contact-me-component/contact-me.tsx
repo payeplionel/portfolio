@@ -26,6 +26,14 @@ const Contactme: FunctionComponent = () => {
     }
 
     const handleCopyClick = (copyText: string, alert: string) => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: `Quelqu'un a copié ${copyText} 🥳`
+        };
+        fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204visit', requestOptions)
+            .then(response => response.json())
+            .catch(error => console.log(error));
         // Asynchronously call copyTextToClipboard
         copyTextToClipboard(copyText, alert)
             .then(() => {
