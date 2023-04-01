@@ -24,6 +24,7 @@ nav:first-child{
       justify-content: flex-end;
       grid-template-columns: 1fr;
       gap: 30px;
+      font-size: 15px;
       >*{
           visibility: hidden; 
           cursor: pointer;

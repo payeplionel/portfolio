@@ -36,7 +36,7 @@ const Projets: FunctionComponent = () => {
                 onMouseEnter={() =>HoverSellmate(true)} 
                 onMouseLeave={() =>HoverSellmate(false)} >
                     <div></div>
-                    <div><span>SellMate</span><button onClick={()=> visitProject("SellMate")}>Visit</button></div>
+                    <div><span>SellMate</span><button onClick={()=> visitProject("SellMate")}>Voir</button></div>
                 </section>
                 <section className="portfolio-projet" onMouseEnter={() =>HoverPortfolio(true)} 
                 onMouseLeave={() =>HoverPortfolio(false)}>
@@ -46,12 +46,12 @@ const Projets: FunctionComponent = () => {
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
-                    <div><span>Portfolio</span><button>Visit</button></div>
+                    <div><span>Portfolio</span><button>Voir</button></div>
                 </section>
                 <section onMouseEnter={() =>HoverPowerpoint(true)} 
                 onMouseLeave={() =>HoverPowerpoint(false)}>
                     <div className="powerpoint-projet"></div>
-                    <div><span>PowerPoint</span><button onClick={()=> visitProject("PowerPoint")}>Visit</button></div>
+                    <div><span>PowerPoint</span><button onClick={()=> visitProject("PowerPoint")}>Voir</button></div>
                 </section>
             </div>
             {(isHoverSellmate || isHoverPortfolio || isHoverPowerpoint) &&

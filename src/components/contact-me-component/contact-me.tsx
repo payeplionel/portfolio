@@ -15,7 +15,7 @@ const Contactme: FunctionComponent = () => {
     const [projectError, setProjectError] = useState("");
     const [message, setMessage] = useState("");
     const [messageError, setMessageError] = useState("");
-    const [textSend, setTextSend] = useState("Send");
+    const [textSend, setTextSend] = useState("Envoyer");
 
     async function copyTextToClipboard(text: string, alert: string) {
         if ('clipboard' in navigator) {
@@ -80,9 +80,9 @@ const Contactme: FunctionComponent = () => {
                 setTextSend("Envoie en cours ...");
 
                 setTimeout(() => {
-                    setTextSend("Message send");
+                    setTextSend("Message envoyé");
                     setTimeout(() => {
-                        setTextSend("Send");
+                        setTextSend("Envoyer");
                     }, 1500);
                 }, 1500);
                 const requestOptions = {
@@ -93,7 +93,7 @@ const Contactme: FunctionComponent = () => {
                 fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204', requestOptions)
                     .then(response => response.json())
                     .then(data => {
-                        setAlerText("mail send");
+                        setAlerText("mail envoyé");
                         setIsCopied(true);
                         setTimeout(() => {
                             setIsCopied(false);
@@ -114,7 +114,7 @@ const Contactme: FunctionComponent = () => {
                         <div>
                             <span><BsTelephone size={25} /></span>
                         </div>
-                        <div onClick={() => handleCopyClick("07 68 38 54 21", "number copied!")} >
+                        <div onClick={() => handleCopyClick("07 68 38 54 21", "numéro copié!")} >
                             <div>
                                 Call Me
                             </div>
@@ -127,7 +127,7 @@ const Contactme: FunctionComponent = () => {
                         <div>
                             <span><AiOutlineMail size={25} /></span>
                         </div>
-                        <div onClick={() => handleCopyClick("payeplionel@outlook.com", "mail copied!")}>
+                        <div onClick={() => handleCopyClick("payeplionel@outlook.com", "mail copié!")}>
                             <div>
                                 Email
                             </div>
@@ -142,7 +142,7 @@ const Contactme: FunctionComponent = () => {
                         </div>
                         <div>
                             <div>
-                                Location
+                                Localisation
                             </div>
                             <div>
                                 France - Limoges
@@ -154,7 +154,7 @@ const Contactme: FunctionComponent = () => {
                     <div className="form-section">
                         <div>
                             <div className="input-section">
-                                <input type="text" id="name" name="name" placeholder="Name" value={name}
+                                <input type="text" id="name" name="name" placeholder="Nom" value={name}
                                     onChange={(e) => setName(e.target.value)} className={nameError ? 'is-invalid' : 'valid'} required />
                                 <span>{nameError}</span>
                             </div>
@@ -165,7 +165,7 @@ const Contactme: FunctionComponent = () => {
                             </div>
                         </div>
                         <div className="input-section">
-                            <input type="text" id="project" name="project" placeholder="Project" value={project}
+                            <input type="text" id="project" name="project" placeholder="Objet" value={project}
                                 onChange={(e) => setProject(e.target.value)} className={projectError ? 'is-invalid' : 'valid'} required />
                             <span>{projectError}</span>
                         </div>

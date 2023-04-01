@@ -38,27 +38,27 @@ const App: FunctionComponent = () => {
           <ul>
             <li>
               <Link activeClass="active" smooth spy to="personnal">
-                Home
+                ACCUEIL
               </Link>
             </li>
             <li>
               <Link activeClass="active" smooth spy to="introduction">
-                About
+                À PROPOS
               </Link>
             </li>
             <li>
               <Link activeClass="active" smooth spy to="skills">
-                Skills
+                COMPÉTENCES
               </Link>
             </li>
             <li>
               <Link activeClass="active" smooth spy to="project">
-                Portfolio
+                PORTFOLIO
               </Link>
             </li>
             <li>
               <Link activeClass="active" smooth spy to="contactme">
-                Contactme
+                CONTACT
               </Link>
             </li>
             <span onClick={modeSwitch}>

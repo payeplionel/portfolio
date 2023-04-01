@@ -10,7 +10,7 @@ const About: FunctionComponent = () => {
                 <p>Hi, I' am Lionel</p>
                 <p>Frontend developer</p>
                 <p>High level experience in web design and development knowledge, producing quality work</p>
-                <p><Link activeClass="active-icon" smooth spy to="contactme"><button><span>Contact me</span><AiOutlineSend/></button></Link></p>
+                <p><Link activeClass="active-icon" smooth spy to="contactme"><button><span>Me Contacter</span><AiOutlineSend/></button></Link></p>
             </div>
             <div>
                 <div>

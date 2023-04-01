@@ -33,6 +33,11 @@
             justify-content: center;
             margin-top: 5vh !important;
             gap: 2vw;
+            p{
+                width: 200px;
+                text-align: center;
+                
+            }
             >div:nth-child(2){
                 >div:first-child{
                     display: grid;
