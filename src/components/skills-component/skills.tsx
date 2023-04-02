@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import { FunctionComponent, useState } from "react";
 import './skills.scss';
 import { BiBriefcaseAlt2, BiBookBookmark } from "react-icons/bi";
 import { BsCalendar2Range } from "react-icons/bs";
@@ -13,8 +13,8 @@ const Skills: FunctionComponent = () => {
 
     return (
         <div className="contain-skills" id="skills">
-            <div>Qualification</div>
-            <div>My personnal journey</div>
+            <div>Parcours professionnel</div>
+            <div>Découvrez mon parcous</div>
             <div>
                 <section>
                     <p onClick={() => modeJourney(true)} className={`${isEducation ? "selected" : ""}`}><BiBookBookmark /> <span>Éducation</span> </p>

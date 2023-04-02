@@ -1,347 +1,391 @@
 @import '../../assets/styles/global.scss';
-.contains-projets{
+
+.contains-projets {
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 10vh !important;
     margin-left: 10vw !important;
     margin-right: 10vw !important;
     height: 100%;
-    >div:first-child{
+
+    >div:first-child {
         font-weight: bold;
         font-size: x-large;
         justify-self: center;
     }
-    >div:nth-child(2){
+
+    >div:nth-child(2) {
         color: $sub-text;
         justify-self: center;
     }
-    >div:nth-child(3){
+
+    >div:nth-child(3) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin-top: 5vh !important;
         justify-self: center;
         gap: 50px;
-        >*{
+
+        >* {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 80% 20%;
             height: 40vh;
             width: 40vh;
         }
-        >section{
+
+        >section {
             background-color: $background-color-project;
             border-radius: 15px 15px 0px 0px;
             cursor: pointer;
-            >div:first-child{
+
+            >div:first-child {
                 padding: 10px;
                 border-radius: 15px 15px 0px 0px;
             }
-            >div:nth-child(2){
+
+            >div:nth-child(2) {
                 text-align: center;
                 align-self: center;
                 vertical-align: text-top;
                 font-weight: 400;
             }
         }
-        >section:first-child{
-            >div:first-child{
+
+        >section:first-child {
+            >div:first-child {
                 background-image: url(../../assets/images/sellmate.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            >div:nth-child(2){
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                >*{
-                    justify-self: center;
-                    align-self: center;
-                }
-                >button{
-                    width: 50px;
-                    margin-top: 0vh !important;
-                    margin-right: 0.5vw !important;
-                    justify-self: end;
-                    box-shadow: none;
-                    height: 4vh;
-                }
-            }
         }
-        >section:nth-child(2){
-            >div:first-child{
-                // background-image: url(../../assets/images/portfolio.png);
-                // background-size: cover;
-                // background-position: center;
-                // background-repeat: no-repeat;
-                >*{
+
+        >section:nth-child(2) {
+            >div:first-child {
+                background-image: url(../../assets/images/portfolio.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                >* {
                     width: 100%;
                     height: 100%;
                 }
             }
-            >div:nth-child(2){
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                >*{
-                    justify-self: center;
-                    align-self: center;
-                }
-                >button{
-                    width: 50px;
-                    margin-top: 0vh !important;
-                    margin-right: 0.5vw !important;
-                    justify-self: end;
-                    box-shadow: none;
-                    height: 4vh;
-                }
-            }
         }
-        >section:nth-child(3){
-            >div:first-child{
+
+        >section:nth-child(3) {
+            >div:first-child {
                 background-image: url(../../assets/images/Powerpoint.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            >div:nth-child(2){
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                >*{
-                    justify-self: center;
-                    align-self: center;
-                }
-                >button{
-                    width: 50px;
-                    margin-top: 0vh !important;
-                    margin-right: 0.5vw !important;
-                    justify-self: end;
-                    box-shadow: none;
-                    height: 4vh;
-                }
-            }
+        }
+
+        >section>div:first-child:hover {
+            animation: images 5s ease 0s infinite normal forwards;
+        }
+        >section>div:nth-child(2){
+            text-align: center;
         }
     }
-    .list-utils{
+
+    .list-utils {
         position: absolute;
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px;
         align-self: center;
-        >div>div:nth-child(1){
+
+        >div>div:nth-child(1) {
             width: 50px;
-            border-radius: 50px;                       
+            border-radius: 50px;
         }
     }
 }
 
-.sellMate-div-1{
+.sellMate-div-1 {
     opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
-    >div:nth-child(1){
+
+    >div:nth-child(1) {
         background: #74baff51;
         background-image: url(../../assets/images/angular.png);
         background-position: center;
         background-size: 60%;
         height: 50px;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
     }
-    >div:nth-child(2){
+
+    >div:nth-child(2) {
         text-align: center;
         font-size: xx-small;
-    }  
+    }
 }
 
-.sellMate-div-2{
+.sellMate-div-2 {
     opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     animation: technologies-entrance 0.5s ease 0.5s 1 normal forwards;
-    >div:nth-child(1){
+
+    >div:nth-child(1) {
         background: #74baff51;
         background-image: url(../../assets/images/typescript.png);
         background-position: center;
         background-size: 60%;
         height: 50px;
         background-position: center;
-        background-repeat: no-repeat; 
-    }  
-    >div:nth-child(2){
+        background-repeat: no-repeat;
+    }
+
+    >div:nth-child(2) {
         text-align: center;
         font-size: xx-small;
-    }    
+    }
 }
 
-.sellMate-div-3{
+.sellMate-div-3 {
     opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     animation: technologies-entrance 0.5s ease 1s 1 normal forwards;
-    >div:nth-child(1){
+
+    >div:nth-child(1) {
         background: #74baff51;
         background-image: url(../../assets/images/scss.png);
         background-position: center;
         background-size: 60%;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         height: 50px;
     }
-    >div:nth-child(2){
+
+    >div:nth-child(2) {
         text-align: center;
         font-size: xx-small;
-    }  
+    }
 }
 
-.portfolio-div-1{
+.portfolio-div-1 {
     opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
-    >div:nth-child(1){
+
+    >div:nth-child(1) {
         background: #74baff51;
         background-image: url(../../assets/images/react.png);
         background-position: center;
         background-size: 60%;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         height: 50px;
-    }    
-    >div:nth-child(2){
+    }
+
+    >div:nth-child(2) {
         text-align: center;
         font-size: xx-small;
-    }  
+    }
 }
 
-.portfolio-div-2{
+.portfolio-div-2 {
     opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     animation: technologies-entrance 0.5s ease 0.5s 1 normal forwards;
-    >div:nth-child(1){
+
+    >div:nth-child(1) {
         background: #74baff51;
         background-image: url(../../assets/images/typescript.png);
         background-position: center;
         background-size: 60%;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         height: 50px;
-    } 
-    >div:nth-child(2){
+    }
+
+    >div:nth-child(2) {
         text-align: center;
         font-size: xx-small;
-    }    
+    }
 }
 
-.portfolio-div-3{
+.portfolio-div-3 {
     opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     animation: technologies-entrance 0.5s ease 1s 1 normal forwards;
-    >div:nth-child(1){
+
+    >div:nth-child(1) {
         background: #74baff51;
         background-image: url(../../assets/images/scss.png);
         background-position: center;
         background-size: 60%;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         height: 50px;
-    } 
-    >div:nth-child(2){
+    }
+
+    >div:nth-child(2) {
         text-align: center;
         font-size: xx-small;
-    }  
+    }
 }
-.pwp-div-1{
+
+.pwp-div-1 {
     opacity: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
     animation: technologies-entrance 0.5s ease 0s 1 normal forwards;
-    >div:nth-child(1){
+
+    >div:nth-child(1) {
         background: #74baff51;
         background-image: url(../../assets/images/pwp.png);
         background-position: center;
         background-size: 60%;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         height: 50px;
-    } 
-    >div:nth-child(2){
+    }
+
+    >div:nth-child(2) {
         text-align: center;
         font-size: xx-small;
-    }  
+    }
 }
 
-.visibility{
+.visibility {
     visibility: hidden;
 }
 
-@keyframes images {
-	0% {
-		background-position: center top;
-		background-size: 100%;
-	}
+video {
+    width: 60%;
+}
 
-	100% {
-		background-position: center top;
-		background-size: 150%;
-	}
+.modal-contain {
+    overflow-y: auto;
+
+    >div:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 10px;
+
+        >span {
+            cursor: pointer;
+        }
+    }
+
+    >div:nth-child(2) {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    >div:last-child {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+
+        >button {
+            width: max-content;
+            height: max-content;
+            padding: 10px !important;
+        }
+    }
+}
+
+@keyframes images {
+    0% {
+        background-position: center;
+    }
+
+    25% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: center;
+    }
+
+    75% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: center;
+    }
 }
 
 @keyframes technologies-entrance {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
+    0% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
 
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-@media (max-width: 1230px){
-    .contains-projets{
-        >div:nth-child(3){
+@media (max-width: 1230px) {
+    .contains-projets {
+        >div:nth-child(3) {
             display: grid;
-        grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
     }
-    .sellMate-div-1{
+
+    .sellMate-div-1 {
         animation: none;
     }
-    .sellMate-div-2{
+
+    .sellMate-div-2 {
         animation: none;
     }
-    .sellMate-div-3{
+
+    .sellMate-div-3 {
         animation: none;
     }
-    .portfolio-div-1{
+
+    .portfolio-div-1 {
         animation: none;
     }
-    .portfolio-div-2{
+
+    .portfolio-div-2 {
         animation: none;
     }
-    .portfolio-div-3{
+
+    .portfolio-div-3 {
         animation: none;
     }
-    .pwp-div-1{
+
+    .pwp-div-1 {
         animation: none;
     }
 }
-@media (max-width: 810px){
-    .contains-projets{
-        >div:nth-child(3){
+
+@media (max-width: 810px) {
+    .contains-projets {
+        >div:nth-child(3) {
             display: grid;
-        grid-template-columns: 1fr;
+            grid-template-columns: 1fr;
         }
     }
 }

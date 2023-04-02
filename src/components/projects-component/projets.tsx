@@ -1,22 +1,28 @@
-import React, { FunctionComponent, useState } from "react";
+import { FunctionComponent, useState } from "react";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import './projets.scss';
+import Modal from "../modal/modal";
 
 const Projets: FunctionComponent = () => {
     const [isHoverSellmate, setHoverSellmate] = useState<boolean>(false);
     const [isHoverPortfolio, setHoverPortfolio] = useState<boolean>(false);
     const [isHoverPowerpoint, setHoverPowerpoint] = useState<boolean>(false);
-
-    const HoverSellmate = (state:boolean) =>{
+    const [showModal, setShowModal] = useState(false);
+    const [headerModal, setHeaderModel] = useState("");
+    
+    const handleClose = () => setShowModal(false);
+    const handleShow = () => setShowModal(true);
+    const HoverSellmate = (state: boolean) => {
         setHoverSellmate(state);
     }
-    const HoverPortfolio = (state:boolean) =>{
+    const HoverPortfolio = (state: boolean) => {
         setHoverPortfolio(state);
     }
-    const HoverPowerpoint = (state:boolean) =>{
+    const HoverPowerpoint = (state: boolean) => {
         setHoverPowerpoint(state);
     }
 
-    const visitProject = (site: string) =>{
+    const visitProject = (site: string) => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -27,31 +33,27 @@ const Projets: FunctionComponent = () => {
             .catch(error => console.log(error));
     }
 
-    return(
+    return (
         <div className="contains-projets" id="project">
             <div>Projets</div>
-            <div>List of my projects</div>
+            <div>Une partie des projets sur lesquels j'ai travaillé</div>
             <div>
-                <section className="sellmate-projet" 
-                onMouseEnter={() =>HoverSellmate(true)} 
-                onMouseLeave={() =>HoverSellmate(false)} >
+                <section className="sellmate-projet"
+                    onMouseEnter={() => HoverSellmate(true)}
+                    onMouseLeave={() => HoverSellmate(false)}
+                    onClick={() => handleShow()}>
                     <div></div>
-                    <div><span>SellMate</span><button onClick={()=> visitProject("SellMate")}>Voir</button></div>
+                    <div><span>SellMate</span></div>
                 </section>
-                <section className="portfolio-projet" onMouseEnter={() =>HoverPortfolio(true)} 
-                onMouseLeave={() =>HoverPortfolio(false)}>
-                    <div>
-                        <video controls>
-                            <source src="/videos/portfolio.mp4" type="video/mp4"/>
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div><span>Portfolio</span><button>Voir</button></div>
+                <section className="portfolio-projet" onMouseEnter={() => HoverPortfolio(true)}
+                    onMouseLeave={() => HoverPortfolio(false)}>
+                    <div></div>
+                    <div><span>Portfolio</span></div>
                 </section>
-                <section onMouseEnter={() =>HoverPowerpoint(true)} 
-                onMouseLeave={() =>HoverPowerpoint(false)}>
+                <section onMouseEnter={() => HoverPowerpoint(true)}
+                    onMouseLeave={() => HoverPowerpoint(false)}>
                     <div className="powerpoint-projet"></div>
-                    <div><span>PowerPoint</span><button onClick={()=> visitProject("PowerPoint")}>Voir</button></div>
+                    <div><span>PowerPoint</span></div>
                 </section>
             </div>
             {(isHoverSellmate || isHoverPortfolio || isHoverPowerpoint) &&
@@ -75,6 +77,23 @@ const Projets: FunctionComponent = () => {
                     <div></div>
                 </section>
             }
+            <Modal show={showModal} handleClose={handleClose}>
+                <div className="modal-contain">
+                    <div>
+                        <h2>Modal Header</h2>
+                        <span><AiOutlineCloseCircle size={28} onClick={handleClose}/></span>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="/videos/portfolio.mp4" type="video/mp4" />
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div>
+                        <button>Voir</button>
+                    </div>
+                </div>
+            </Modal>
         </div>
     )
 }

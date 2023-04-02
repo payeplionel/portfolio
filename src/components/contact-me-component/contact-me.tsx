@@ -106,8 +106,8 @@ const Contactme: FunctionComponent = () => {
 
     return (
         <div className="contain-contact-me" id="contactme">
-            <div>Contact Me</div>
-            <div>Get in touch</div>
+            <div>CONTACTEZ-MOI</div>
+            <div>N'hésitez pas à me contacter</div>
             <div>
                 <div>
                     <div className="contact-items">
@@ -116,7 +116,7 @@ const Contactme: FunctionComponent = () => {
                         </div>
                         <div onClick={() => handleCopyClick("07 68 38 54 21", "numéro copié!")} >
                             <div>
-                                Call Me
+                                Téléphone
                             </div>
                             <div>
                                 07 68 38 54 21
