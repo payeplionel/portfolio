@@ -1,5 +1,4 @@
 import { FunctionComponent, useState } from "react";
-import { AiOutlineCloseCircle } from "react-icons/ai";
 import './projets.scss';
 import Modal from "../modal/modal";
 
@@ -9,9 +8,34 @@ const Projets: FunctionComponent = () => {
     const [isHoverPowerpoint, setHoverPowerpoint] = useState<boolean>(false);
     const [showModal, setShowModal] = useState(false);
     const [headerModal, setHeaderModel] = useState("");
-    
+    const [titleModal, setTitleModel] = useState("");
+    const [contentModal, setContentModel] = useState([""]);
+    const [contentNextModal, setContentNextModel] = useState([""]);
+    // const [videoModal, setVideoModel] = useState("");
+
     const handleClose = () => setShowModal(false);
-    const handleShow = () => setShowModal(true);
+    const handleShow = (projectName: string) => {
+        setShowModal(true);
+        setHeaderModel(projectName);
+        if(projectName==="SellMate"){
+            setTitleModel("SellMate est un template application web.");
+            setContentModel(["Interface de présentation complète (Produits, Services, etc...).",
+            "Interface de connexion et d'authentification.", "Illustrations des services."]);
+            setContentNextModel(["Tableau de bord de gestion de données."]);
+        }
+        if(projectName==="Portfolio"){
+            setTitleModel("Portfolio est un portfolio 🤭.");
+            setContentModel(["Je vous montre qui je suis. 😊.",
+            "Présentation de mes projets.", "Prise de contact."]);
+            setContentNextModel(["Ajout d'un projet Flutter."]);
+        }
+        if(projectName==="Powerpoint"){
+            setTitleModel("Powerpoint est un template de présentation PowerPoint pour un stage académique.");
+            setContentModel(["Présentation de l'entreprise d'accueil.",
+            "Déroulement du stage.", "Présentation des missions."]);
+            setContentNextModel(["Remplissage de données par défaut."]);
+        }
+    }
     const HoverSellmate = (state: boolean) => {
         setHoverSellmate(state);
     }
@@ -22,16 +46,16 @@ const Projets: FunctionComponent = () => {
         setHoverPowerpoint(state);
     }
 
-    const visitProject = (site: string) => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: `Quelqu'un a visité ton site ${site} 📲`
-        };
-        fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204visit', requestOptions)
-            .then(response => response.json())
-            .catch(error => console.log(error));
-    }
+    // const visitProject = (site: string) => {
+    //     const requestOptions = {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: `Quelqu'un a visité ton site ${site} 📲`
+    //     };
+    //     fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204visit', requestOptions)
+    //         .then(response => response.json())
+    //         .catch(error => console.log(error));
+    // }
 
     return (
         <div className="contains-projets" id="project">
@@ -41,20 +65,21 @@ const Projets: FunctionComponent = () => {
                 <section className="sellmate-projet"
                     onMouseEnter={() => HoverSellmate(true)}
                     onMouseLeave={() => HoverSellmate(false)}
-                    onClick={() => handleShow()}>
+                    onClick={() => handleShow("SellMate")}>
                     <div></div>
                     <div><span>SellMate</span></div>
                 </section>
                 <section className="portfolio-projet" onMouseEnter={() => HoverPortfolio(true)}
-                    onMouseLeave={() => HoverPortfolio(false)}>
+                    onMouseLeave={() => HoverPortfolio(false)} onClick={() => handleShow("Portfolio")}>
                     <div></div>
                     <div><span>Portfolio</span></div>
                 </section>
                 <section onMouseEnter={() => HoverPowerpoint(true)}
-                    onMouseLeave={() => HoverPowerpoint(false)}>
+                    onMouseLeave={() => HoverPowerpoint(false)} onClick={() => handleShow("Powerpoint")}>
                     <div className="powerpoint-projet"></div>
                     <div><span>PowerPoint</span></div>
                 </section>
+                
             </div>
             {(isHoverSellmate || isHoverPortfolio || isHoverPowerpoint) &&
                 <section className="list-utils">
@@ -77,23 +102,8 @@ const Projets: FunctionComponent = () => {
                     <div></div>
                 </section>
             }
-            <Modal show={showModal} handleClose={handleClose}>
-                <div className="modal-contain">
-                    <div>
-                        <h2>Modal Header</h2>
-                        <span><AiOutlineCloseCircle size={28} onClick={handleClose}/></span>
-                    </div>
-                    <div>
-                        <video controls>
-                            <source src="/videos/portfolio.mp4" type="video/mp4" />
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div>
-                        <button>Voir</button>
-                    </div>
-                </div>
-            </Modal>
+            <Modal show={showModal} handleClose={handleClose} headerModal={headerModal} titleModal={titleModal}
+            contentModal={contentModal} contentNextModal={contentNextModal}/>
         </div>
     )
 }
