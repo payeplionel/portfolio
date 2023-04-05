@@ -93,11 +93,11 @@
     }
 
     .list-utils {
-        position: absolute;
+        position: fixed;
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px;
-        align-self: center;
+        top: 20vh;
 
         >div>div:nth-child(1) {
             width: 50px;
@@ -343,7 +343,7 @@
     }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 825px) {
     .contains-projets {
         >div:nth-child(3) {
             display: grid;

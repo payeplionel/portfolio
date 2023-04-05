@@ -137,13 +137,13 @@ video {
 @media (max-width: 1150px) {
     .modal-main {
         width: 70%;
-        height: 80%;
+        height: max-content;
     }
 }
 
 @media (max-width: 675px) {
     .modal-main {
         width: 85%;
-        height: 90%;
+        height: max-content;
     }
 }
