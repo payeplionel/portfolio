@@ -27,21 +27,21 @@ const Introduction: FunctionComponent = () => {
                     <section>
                         <p>
                             <span>01+</span>
-                            <span>Years experience</span>
+                            <span>Années d'expérience</span>
                         </p>
                         <p>
                             <span>02+</span>
-                            <span>Completed projects</span>
+                            <span>Projets portfolio</span>
                         </p>
 
                         <p>
                             <span>03+</span>
-                            <span>Companies worked</span>
+                            <span>Expériences professionnelles</span>
                         </p>
                     </section>
                     <section>
                         <a onClick={downloadCV} href="/cv/Lionel_PAYEP_CV.pdf" download="Lionel_PAYEP_CV">
-                            <button><b>Download CV  <BsCloudDownload /></b></button>
+                            <button><b>Voir Mon CV  <BsCloudDownload /></b></button>
                         </a>
                     </section>
                 </div>
