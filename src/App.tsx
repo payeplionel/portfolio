@@ -1,8 +1,13 @@
 import './App.scss';
-import React, { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { Link } from 'react-scroll';
 import { BrowserRouter } from 'react-router-dom';
 import moon from './assets/images/moon.gif';
+import home from './assets/icons/home.png';
+import compass from './assets/icons/compass.png';
+import email from './assets/icons/email.png';
+import user from './assets/icons/user.png';
+import idea from './assets/icons/output-onlinegiftools.gif';
 import sun from './assets/images/sun.gif';
 import Social from './components/social-home-component/social';
 import About from './components/about-home-component/about';
@@ -108,27 +113,27 @@ const App: FunctionComponent = () => {
         <ul>
           <li>
             <Link activeClass="active-icon" smooth spy to="personnal" onClick={() => onEnterSection(1)}>
-              {section === 1 ? <AiFillHome size={30}/> : <AiOutlineHome size={30} />}
+              <img src={home} width={25} alt='home'/>
             </Link>
           </li>
           <li>
             <Link activeClass="active-icon" smooth spy to="introduction" onClick={() => onEnterSection(2)}>
-              {section === 2 ? <BsFillPatchQuestionFill size={30}/> : <BsPatchQuestion size={30} />}
+              <img src={compass} width={30} alt='discover'/>
             </Link>
           </li>
           <li>
             <Link activeClass="active-icon" smooth spy to="skills" onClick={() => onEnterSection(3)}>
-              {section === 3 ? <BsPersonBadgeFill size={30} /> : <BsPersonBadge size={30} />}
+              <img src={user} width={25} alt='user'/>
             </Link>
           </li>
           <li>
             <Link activeClass="active-icon" smooth spy to="project" onClick={() => onEnterSection(4)}>
-              {section === 4 ? <AiFillExperiment size={30}/> : <AiOutlineExperiment size={30} />}
+              <img src={idea} width={35} alt='user'/>
             </Link>
           </li>
           <li>
             <Link activeClass="active-icon" smooth spy to="contactme" onClick={() => onEnterSection(5)}>
-              {section === 5 ? <GoMailRead size={30}/> : <CiMail size={30} />}
+              <img src={email} width={25} alt='mail'/>
             </Link>
           </li>
         </ul>
