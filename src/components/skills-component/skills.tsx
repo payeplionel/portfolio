@@ -14,7 +14,7 @@ const Skills: FunctionComponent = () => {
     return (
         <div className="contain-skills" id="skills">
             <div>Parcours professionnel</div>
-            <div>Découvrez mon parcous</div>
+            <div>Découvrez mon parcours</div>
             <div>
                 <section>
                     <p onClick={() => modeJourney(true)} className={`${isEducation ? "selected" : ""}`}><BiBookBookmark /> <span>Éducation</span> </p>

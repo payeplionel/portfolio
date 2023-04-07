@@ -2,32 +2,28 @@ import './App.scss';
 import { FunctionComponent, useState } from 'react';
 import { Link } from 'react-scroll';
 import { BrowserRouter } from 'react-router-dom';
-import moon from './assets/images/moon.gif';
+// import moon from './assets/images/moon.gif';
 import home from './assets/icons/home.png';
 import compass from './assets/icons/compass.png';
-import email from './assets/icons/email.png';
+import email from './assets/icons/envelope.png';
 import user from './assets/icons/user.png';
 import idea from './assets/icons/output-onlinegiftools.gif';
-import sun from './assets/images/sun.gif';
+// import sun from './assets/images/sun.gif';
 import Social from './components/social-home-component/social';
 import About from './components/about-home-component/about';
 import Introduction from './components/introduction/introduction';
 import Skills from './components/skills-component/skills';
 import Projets from './components/projects-component/projets';
 import Contactme from './components/contact-me-component/contact-me';
-import { AiFillExperiment, AiFillHome, AiOutlineExperiment, AiOutlineHome } from 'react-icons/ai';
-import { BsFillPatchQuestionFill, BsPatchQuestion, BsPersonBadge, BsPersonBadgeFill } from 'react-icons/bs';
-import { GoMailRead } from 'react-icons/go';
-import { CiMail } from 'react-icons/ci';
 
 const App: FunctionComponent = () => {
-  const [isdarkmode, setdarkmode] = useState<boolean>(false);
-  const [section, setSection] = useState<number>(1);
+  // const [isdarkmode, setdarkmode] = useState<boolean>(false);
+  const [, setSection] = useState<number>(1);
 
 
-  const modeSwitch = () => {
-    setdarkmode(!isdarkmode);
-  }
+  // const modeSwitch = () => {
+  //   setdarkmode(!isdarkmode);
+  // }
 
   const onEnterSection = (section: number) => {
     setSection(section);
@@ -66,7 +62,7 @@ const App: FunctionComponent = () => {
                 CONTACT
               </Link>
             </li>
-            <span onClick={modeSwitch}>
+            {/* <span onClick={modeSwitch}>
               {isdarkmode ? (
                 <img src={sun} alt="Logo" width={35} />
               ) :
@@ -74,7 +70,7 @@ const App: FunctionComponent = () => {
                   <img src={moon} alt="Logo" width={35} />
                 )
               }
-            </span>
+            </span> */}
           </ul>
         </div>
       </nav>
