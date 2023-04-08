@@ -26,9 +26,9 @@ const Introduction: FunctionComponent = () => {
             <div>
                 <div>
                     <div>
-                        <img src={dinner} width={25} alt='dinner'/>
                         <img src={balise} width={25} alt='balise'/>
                         <img src={dev} width={25} alt='dev'/>
+                        <img src={dinner} width={25} alt='dinner'/>
                         <img src={football} width={25} alt='football'/>
                         <img src={holiday} width={25} alt='holiday'/>
                     </div>

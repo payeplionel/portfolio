@@ -41,6 +41,27 @@
                 background-color: #9880fa22;
                 clip-path: circle( 15% at 0% 0%);
                 transition: clip-path 0.4s ease-in-out;
+                >img{
+                    position: relative;
+                }
+                >img:first-child{
+                    top: 5%;
+                    left: 5px;
+                }
+                >img:nth-child(2){
+                    top: 20%;
+                    left: 85%;
+                }
+                >img:nth-child(3){
+                    top: 85%;
+                }
+                >img:nth-child(4){
+                    top: 85%;
+                    left: 70%;
+                }
+                >img:nth-child(5){
+                    left: 30%;
+                }
             }
         }
         >div:first-child:hover{
