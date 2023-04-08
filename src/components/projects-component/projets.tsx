@@ -11,7 +11,6 @@ const Projets: FunctionComponent = () => {
     const [titleModal, setTitleModel] = useState("");
     const [contentModal, setContentModel] = useState([""]);
     const [contentNextModal, setContentNextModel] = useState([""]);
-    // const [videoModal, setVideoModel] = useState("");
 
     const handleClose = () => setShowModal(false);
     const handleShow = (projectName: string) => {
