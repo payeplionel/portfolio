@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import './modal.scss';
 // import sellmate from "../../assets/videos/sellmate.mp4";
 
@@ -13,6 +13,25 @@ interface ModalProps {
 
 const Modal: FunctionComponent<ModalProps> = ({ show, handleClose, headerModal, titleModal, contentModal, contentNextModal }) => {
     const showHideClassName = show ? 'modal display-block' : 'modal display-none';
+    const goToSite = () => {
+        if (headerModal === "SellMate") {
+            window.location.assign("https://sellmate-rho.vercel.app/")
+        }
+        if (headerModal === "Portfolio") {
+            window.location.assign("https://www.lionelpayep.com/")
+        }
+    }
+    useEffect(() => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: `Quelqu'un a visité ton site ${headerModal} 📲`
+        };
+        fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204visit', requestOptions)
+            .then(response => response.json())
+            .catch(error => console.log(error));
+    }, [headerModal])
+
     return (
         <div>
             <div className={showHideClassName}>
@@ -30,13 +49,13 @@ const Modal: FunctionComponent<ModalProps> = ({ show, handleClose, headerModal, 
                             }
                             {headerModal === "Portfolio" &&
                                 <video controls>
-                                <source src="./videos/portfolio.mp4" type="video/mp4" />
+                                    <source src="./videos/portfolio.mp4" type="video/mp4" />
                                     Your browser does not support HTML5 video.
                                 </video>
                             }
                             {headerModal === "Powerpoint" &&
                                 <video controls>
-                                <source src="./videos/powerpoint.mp4" type="video/mp4" />
+                                    <source src="./videos/powerpoint.mp4" type="video/mp4" />
                                     Your browser does not support HTML5 video.
                                 </video>
                             }
@@ -70,7 +89,7 @@ const Modal: FunctionComponent<ModalProps> = ({ show, handleClose, headerModal, 
                         </div>
                         <div>
                             <button onClick={handleClose}>Fermer</button>
-                            <button>Voir</button>
+                            <button onClick={goToSite}>Voir</button>
                         </div>
                     </div>
                 </section>

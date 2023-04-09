@@ -49,7 +49,7 @@ const App: FunctionComponent = () => {
             </li>
             <li>
               <Link activeClass="active" smooth spy to="skills">
-                COMPÉTENCES
+                PARCOURS
               </Link>
             </li>
             <li>

@@ -45,17 +45,6 @@ const Projets: FunctionComponent = () => {
         setHoverPowerpoint(state);
     }
 
-    // const visitProject = (site: string) => {
-    //     const requestOptions = {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         body: `Quelqu'un a visité ton site ${site} 📲`
-    //     };
-    //     fetch('https://ntfy.sh/portfoliontfylionelid22mars20231204visit', requestOptions)
-    //         .then(response => response.json())
-    //         .catch(error => console.log(error));
-    // }
-
     return (
         <div className="contains-projets" id="project">
             <div>Projets</div>
